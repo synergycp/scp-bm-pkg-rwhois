@@ -1,0 +1,11 @@
+block title
+  span(
+    translate='pkg.rwhois.client.contact.form.EDIT'
+    translate-value-name='{{vm.edit.input.ip}}'
+  )
+
+block form
+  contact-form(form="vm.edit")
+
+block append right-side
+  contact-buttons(contact="vm.edit.input")

@@ -1,0 +1,101 @@
+{
+  "list": {
+    "TITLE": "RWhois Contacts",
+    "heading": {
+      "IP": "IP",
+      "Contact": "Contact",
+      "ENTITY_ID": "Entity",
+      "ACTIONS": "Actions"
+    },
+    "filter": {
+      "search": {
+        "LABEL": "Search",
+        "PLACEHOLDER": "Search"
+      }
+    }
+  },
+  "view": {
+    "title": {
+      "PAGE": "View RWhois Contact"
+    },
+    "overview": {
+      "TITLE": "Overview",
+      "IP": "IP Address",
+      "Contact": "Contact",
+      "ENTITIES": "Entities"
+    },
+    "body": {
+      "TITLE": "RWhois Contact Body"
+    }
+  },
+  "import": {
+    "TITLE": "Import Zone File",
+    "file": {
+      "LABEL": "Zone File"
+    }
+  },
+  "form": {
+    "ADD": "Add",
+    "EDIT": "Edit RWhois Contact for {{name}}",
+    "TITLE": "Create RWhois Contacts",
+    "LABEL": "RWhois Management",
+    "SAVE": "Save",
+    "ip": {
+      "LABEL": "IP",
+      "PLACEHOLDER": "Enter IP"
+    },
+    "ptr": {
+      "LABEL": "Contact",
+      "PLACEHOLDER": "Enter Contact"
+    },
+    "entity_id": {
+      "LABEL": "Entity",
+      "PLACEHOLDER": "Enter Entity"
+    },
+    "list": {
+      "ip": {
+        "LABEL": "IP"
+      },
+      "ptr": {
+        "LABEL": "Contact RECORD"
+      }
+    }
+  },
+  "modal": {
+    "delete": {
+      "TITLE": "Delete RWhois Contact",
+      "BODY": "Are you sure you wish to delete this RWhois Contact?",
+      "CANCEL": "Cancel",
+      "SUBMIT": "Delete Contact"
+    }
+  },
+  "action": {
+    "EDIT": "Edit"
+  },
+  "buttons": {
+    "DELETE": "Delete"
+  },
+  "dashboard": {
+    "add": {
+      "TITLE" : "Add Contact"
+    },
+    "input": {
+      "IP": {
+        "TITLE": "IP Address",
+        "PLACEHOLDER": "IP Address"
+      },
+      "Contact": {
+        "TITLE": "Contact",
+        "PLACEHOLDER": "Contact"
+      }
+    },
+    "submit": {
+      "add": {
+        "TITLE": "Add"
+      }
+    }
+  },
+  "alert": {
+    "alert-info": "Add an IP Entity to manage RWhois for this server."
+  }
+}

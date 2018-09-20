@@ -1,0 +1,19 @@
+extends /node_modules/scp-ng-gulp/resources/pug/table-checkable
+
+block headings
+  th.sortable(ng-if="table.showIp")
+    span(translate="pkg.rwhois.client.contact.list.heading.IP")
+    sort(col="ip")
+  th.sortable(ng-if="table.showContact")
+    span(translate="pkg.rwhois.client.contact.list.heading.Contact")
+    sort(col="contact")
+
+block columns
+  td(
+    ng-if="table.showIp"
+    ng-bind="row.ip"
+  )
+  td(
+    ng-if="table.showContact"
+    ng-bind="row.contact"
+  )

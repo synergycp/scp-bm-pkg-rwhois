@@ -1,0 +1,21 @@
+doctype html
+include /node_modules/scp-ng-gulp/resources/pug/mixins/form
+
++field(
+  "{{ 'pkg.rwhois.contact.form.name.LABEL' | translate }}",
+  "name"
+)(
+  ng-model="clientForm.input.name"
+)
++field(
+  "{{ 'pkg.rwhois.contact.form.email.LABEL' | translate }}",
+  "email"
+)(
+  ng-model="clientForm.input.email"
+)
++field(
+  "{{ 'pkg.rwhois.contact.form.phone.LABEL' | translate }}",
+  "phone"
+)(
+  ng-model="clientForm.input.phone"
+)
