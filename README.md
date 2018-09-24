@@ -9,15 +9,18 @@ The RWhois package requires installation of the RWhois server. This can be done 
 As root user (or add "sudo" before "bash" if running as a sudo user):
 
 ```bash
-curl -sS https://install.synergycp.com/bm/packages/rwhois-installer.sh | bash
+curl -sSo /tmp/install.sh https://install.synergycp.com/bm/packages/rwhois-installer.sh
+bash /tmp/install.sh
 ```
 
 ## Setting up the Package on SynergyCP
-1. Install the RWhois package on SynergyCP. As a sudo user (or run as root user and remove sudo):
+1. Install the RWhois package on SynergyCP. As root (or add "sudo" at the beginning if running as a sudo user):
 
     ```
-    sudo /scp/bin/scp-package rwhois
+    /scp/bin/scp-package
     ```
+    
+    Then type `rwhois`.
 
 2. Configure the settings at System > Settings > RWhois.
 
