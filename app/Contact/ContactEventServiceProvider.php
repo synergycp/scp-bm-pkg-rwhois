@@ -27,5 +27,8 @@ extends EventServiceProvider
         Events\ContactEmailUpdated::class => [
             EventLogger::class,
         ],
+        Events\ContactTypeUpdated::class => [
+            EventLogger::class,
+        ],
     ];
 }

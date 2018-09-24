@@ -13,6 +13,7 @@ extends RestRequest
     public function boot()
     {
         $this->rules = [
+            'type.id' => 'required|in:'.implode(',', Contact::allowedTypes()),
         ];
     }
 }

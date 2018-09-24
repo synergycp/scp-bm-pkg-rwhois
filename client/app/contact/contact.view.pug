@@ -1,11 +1,13 @@
+extends /node_modules/scp-ng-gulp/resources/pug/edit
+
 block title
   span(
     translate='pkg.rwhois.client.contact.form.EDIT'
-    translate-value-name='{{vm.edit.input.ip}}'
+    translate-value-name='{{vm.edit.input.name}}'
   )
 
 block form
-  contact-form(form="vm.edit")
+  pkg-rwhois-contact-form(form="vm.edit")
 
 block append right-side
-  contact-buttons(contact="vm.edit.input")
+  pkg-rwhois-contact-buttons(contact="vm.edit.input")

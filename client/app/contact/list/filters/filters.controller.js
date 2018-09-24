@@ -3,7 +3,7 @@
 
   angular
     .module('pkg.rwhois.contact.list.filters')
-    .controller('ContactFiltersCtrl', ContactFiltersCtrl)
+    .controller('PkgRwhoisContactFiltersCtrl', ContactFiltersCtrl)
     ;
 
   /**

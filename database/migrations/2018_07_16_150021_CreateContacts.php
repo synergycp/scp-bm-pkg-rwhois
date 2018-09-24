@@ -24,6 +24,8 @@ class CreateContacts extends Migration
 
             $table->integer('client_id')->unsigned();
             $table->foreign('client_id')->references('id')->on('clients');
+
+            $table->timestamps();
         });
     }
 

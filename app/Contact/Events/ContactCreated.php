@@ -8,7 +8,7 @@ class ContactCreated extends ContactLoggableEvent
 {
     public function log(Log $log)
     {
-        $log->setDesc('Contact created')
+        $log->setDesc('RWhois Contact created')
             ->setTarget($this->target)
             ->save()
             ;

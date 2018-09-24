@@ -1,0 +1,35 @@
+doctype html
+include /node_modules/scp-ng-gulp/resources/pug/mixins/form
+
++field(
+  "{{ 'pkg.rwhois.client.contact.form.name.LABEL' | translate }}",
+  "name"
+)(
+  ng-model="contactForm.input.name"
+  placeholder="{{ 'pkg.rwhois.client.contact.form.name.PLACEHOLDER' | translate }}"
+)
++field(
+  "{{ 'pkg.rwhois.client.contact.form.email.LABEL' | translate }}",
+  "email"
+)(
+  ng-model="contactForm.input.email"
+  placeholder="{{ 'pkg.rwhois.client.contact.form.email.PLACEHOLDER' | translate }}"
+)
++field(
+  "{{ 'pkg.rwhois.client.contact.form.phone.LABEL' | translate }}",
+  "phone"
+)(
+  ng-model="contactForm.input.phone"
+  placeholder="{{ 'pkg.rwhois.client.contact.form.phone.PLACEHOLDER' | translate }}"
+)
++select(
+  "{{ 'pkg.rwhois.client.contact.form.type.LABEL' | translate }}",
+  "type.id"
+)(
+  ng-model="contactForm.input.type.id"
+)
+  option(
+    ng-repeat="type in contactForm.allowedRoles track by type.id"
+    ng-bind="type.name"
+    ng-value="type.id"
+  )

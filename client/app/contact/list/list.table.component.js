@@ -3,20 +3,22 @@
 
   angular
     .module('pkg.rwhois.contact.list')
-    .component('contactTable', {
+    .component('pkgRwhoisContactTable', {
       require: {
         list: '\^list',
       },
       bindings: {
-        showIp: '=?',
-        showContact: '=?',
+        showName: '=?',
+        showEmail: '=?',
+        showPhone: '=?',
+        showRole: '=?',
         showActions: '=?',
       },
-      controller: 'ContactTableCtrl as table',
+      controller: 'PkgRwhoisContactTableCtrl as table',
       transclude: true,
       templateUrl: tableTemplateUrl
     })
-    .controller('ContactTableCtrl', ContactTableCtrl)
+    .controller('PkgRwhoisContactTableCtrl', ContactTableCtrl)
   ;
 
   /**
@@ -43,8 +45,10 @@
 
     function init() {
       _.defaults(table, {
-        showIp: true,
-        showContact: true,
+        showName: true,
+        showEmail: true,
+        showPhone: true,
+        showRole: true,
         showActions: true,
       });
     }

@@ -3,7 +3,7 @@
 
   angular
     .module('pkg.rwhois.contact.list.filters')
-    .component('contactFilters', {
+    .component('pkgRwhoisContactFilters', {
       require: {
         list: '\^list',
       },
@@ -12,7 +12,7 @@
         current: '=',
         change: '&?',
       },
-      controller: 'ContactFiltersCtrl as filters',
+      controller: 'PkgRwhoisContactFiltersCtrl as filters',
       transclude: true,
       templateUrl: function(RouteHelpers) {
           "ngInject";

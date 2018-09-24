@@ -4,11 +4,11 @@ namespace Packages\Rwhois\App\Contact\Events;
 
 use App\Log\Log;
 
-class ContactNameUpdated extends ContactLoggableEvent
+class ContactTypeUpdated extends ContactLoggableEvent
 {
     public function log(Log $log)
     {
-        $log->setDesc('RWhois Contact name updated')
+        $log->setDesc('RWhois Contact type updated')
             ->setTarget($this->target)
             ->save()
             ;

@@ -8,7 +8,7 @@ class ContactPhoneUpdated extends ContactLoggableEvent
 {
     public function log(Log $log)
     {
-        $log->setDesc('Contact phone updated')
+        $log->setDesc('RWhois Contact phone updated')
             ->setTarget($this->target)
             ->save()
             ;

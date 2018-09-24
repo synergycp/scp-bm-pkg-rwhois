@@ -1,19 +1,44 @@
 extends /node_modules/scp-ng-gulp/resources/pug/table-checkable
 
 block headings
-  th.sortable(ng-if="table.showIp")
-    span(translate="pkg.rwhois.client.contact.list.heading.IP")
-    sort(col="ip")
-  th.sortable(ng-if="table.showContact")
-    span(translate="pkg.rwhois.client.contact.list.heading.Contact")
-    sort(col="contact")
+  th.sortable(ng-if="table.showName")
+    span(translate="pkg.rwhois.client.contact.list.heading.NAME")
+    sort(col="name")
+  th.sortable(ng-if="table.showEmail")
+    span(translate="pkg.rwhois.client.contact.list.heading.EMAIL")
+    sort(col="email")
+  th.sortable(ng-if="table.showPhone")
+    span(translate="pkg.rwhois.client.contact.list.heading.PHONE")
+    sort(col="phone")
+  th.sortable(ng-if="table.showRole")
+    span(translate="pkg.rwhois.client.contact.list.heading.ROLE")
+    sort(col="type")
+  th(ng-if="table.showActions")
+    span(translate="pkg.rwhois.client.contact.list.heading.ACTIONS")
 
 block columns
   td(
-    ng-if="table.showIp"
-    ng-bind="row.ip"
+    ng-if="table.showName"
+    ng-bind="row.name"
   )
   td(
-    ng-if="table.showContact"
-    ng-bind="row.contact"
+    ng-if="table.showEmail"
+    ng-bind="row.email"
   )
+  td(
+    ng-if="table.showPhone"
+    ng-bind="row.phone"
+  )
+  td(
+    ng-if="table.showRole"
+    ng-bind="row.type.name"
+  )
+  td(
+    ng-if="table.showActions"
+  )
+    .btn-group.btn-group-xs
+      a.btn.btn-default(
+        ui-sref="app.pkg.rwhois.contact.view({ id: row.id })"
+        translate="app.action.VIEW"
+      )
+

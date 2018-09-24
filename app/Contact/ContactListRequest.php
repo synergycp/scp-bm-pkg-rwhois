@@ -7,5 +7,10 @@ use App\Http\Requests\ListRequest;
 class ContactListRequest
 extends ListRequest
 {
-    public $orders = [];
+    public $orders = [
+        'name',
+        'email',
+        'phone',
+        'type',
+    ];
 }

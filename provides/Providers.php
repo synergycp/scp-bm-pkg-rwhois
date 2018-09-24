@@ -8,4 +8,5 @@ namespace Packages\Rwhois\App;
 
 return [
     Contact\ContactServiceProvider::class,
+    Result\ResultServiceProvider::class,
 ];

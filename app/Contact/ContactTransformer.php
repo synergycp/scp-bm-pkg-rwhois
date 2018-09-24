@@ -20,6 +20,10 @@ extends Transformer
             'email',
             'phone',
         ]) + [
+            'type' => [
+                'id' => $item->type,
+                'name' => $item->getTypeDescription(),
+            ],
         ];
     }
 

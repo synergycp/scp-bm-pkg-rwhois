@@ -9,10 +9,10 @@
   /**
    * @ngInject
    */
-  function ContactIndexCtrl(ContactList, ListFilter, _) {
+  function ContactIndexCtrl(PkgRwhoisContactList, PkgRwhoisAllowedRoles, ListFilter, _, Loader) {
     var vm = this;
 
-    vm.list = ContactList();
+    vm.list = PkgRwhoisContactList();
     vm.filters = ListFilter(vm.list);
 
     vm.create = {
@@ -20,11 +20,15 @@
       submit: create,
     };
 
-    vm.logs = {
-      filter: {
-        target_type: 'pkg.rwhois.contact',
-      },
-    };
+    vm.allowedRoles = [];
+    vm.allowedRolesLoader = Loader();
+
+    vm.allowedRolesLoader.during(
+      PkgRwhoisAllowedRoles.get().then(function (allowedRoles) {
+        _.setContents(vm.allowedRoles, allowedRoles);
+        console.log(allowedRoles);
+      })
+    );
 
     activate();
 

@@ -20,7 +20,7 @@
         .state('contact.view', {
           url: '/:id',
           title: 'View Contact',
-          controller: 'ContactViewCtrl as vm',
+          controller: 'PkgRwhoisContactViewCtrl as vm',
           templateUrl: pkg.asset('client/contact/contact.view.html'),
         })
         .url('contact/?([0-9]*)', mapReportUrl)

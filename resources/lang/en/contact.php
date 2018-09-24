@@ -7,5 +7,6 @@ return [
         'name' => 'One RWhois Contact\'s name has been changed.|:count RWhois Contacts\' names have been changed.',
         'email' => 'One RWhois Contact\'s email has been changed.|:count RWhois Contacts\' emails have been changed.',
         'phone' => 'One RWhois Contact\'s phone number has been changed.|:count RWhois Contacts\' phone numbers have been changed.',
+        'type' => 'One RWhois Contact\'s role has been changed.|:count RWhois Contacts\' roles have been changed.',
     ],
 ];

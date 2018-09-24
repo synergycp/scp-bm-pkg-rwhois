@@ -11,10 +11,46 @@ use Illuminate\Routing\Router;
 class ContactRoutesProvider
 extends RouteServiceProvider
 {
+    /**
+     * @var string
+     */
+    protected $package = 'rwhois';
+
+    /**
+     * Setup Routes.
+     */
+    public function bootRoutes()
+    {
+        $this->loadTranslationsFrom(
+            $this->basePath() . '/resources/lang',
+            'pkg.' . $this->folder()
+        );
+    }
+
+    /**
+     * @return string
+     */
+    protected function basePath()
+    {
+        return sprintf(
+            '%s/packages/%s',
+            $this->app->basePath(),
+            $this->folder()
+        );
+    }
+
+    /**
+     * @return string
+     */
+    protected function folder()
+    {
+        return $this->package;
+    }
+
     protected function api(Router $router)
     {
         $router->resource(
-            'pkg/rwhois/contact',
+            'contact',
             ContactController::class
         );
     }

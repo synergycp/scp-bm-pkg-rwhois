@@ -10,7 +10,7 @@ class ContactDeleted extends ContactLoggableEvent
 
     public function log(Log $log)
     {
-        $log->setDesc('Contact deleted')
+        $log->setDesc('RWhois Contact deleted')
             ->setTarget($this->target)
             ->save()
             ;

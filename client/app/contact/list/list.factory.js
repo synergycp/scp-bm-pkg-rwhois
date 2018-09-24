@@ -3,7 +3,7 @@
 
   angular
     .module('pkg.rwhois.contact.list')
-    .factory('ContactList', ContactListFactory);
+    .factory('PkgRwhoisContactList', ContactListFactory);
 
   /**
    * ContactList Factory

@@ -1,6 +1,4 @@
 extends /node_modules/scp-ng-gulp/resources/pug/list-page
-include /node_modules/scp-ng-gulp/resources/pug/mixins/form
-include /node_modules/scp-ng-gulp/resources/pug/mixins/list
 
 block list
   list.panel.panel-default(list="vm.list")
@@ -20,5 +18,22 @@ block list
     list-footer
 
 block bottom-left
-  +create-form("{{ 'pkg.rwhois.client.contact.form.TITLE' | translate }}", 'contact-create-form')
-    pkg-rwhois-contact-form(form="vm.create")
+  form(
+    ng-submit="vm.create.submit()"
+    id="contact-create-form"
+  )
+    +panel("{{ 'pkg.rwhois.client.contact.form.TITLE' | translate }}").relative
+      .loader(ng-class="vm.allowedRolesLoader.class")
+      .panel-body.form-horizontal
+        div.panel-body(ng-if="vm.allowedRolesLoader.hasLoaded && !vm.allowedRoles.length")
+          p.text-center(translate="pkg.rwhois.client.contact.form.NO-ROLES")
+
+        div(ng-if="!vm.allowedRolesLoader.hasLoaded || vm.allowedRoles.length")
+          pkg-rwhois-contact-form(form="vm.create")
+
+      .panel-footer.clearfix(ng-if="!vm.allowedRolesLoader.hasLoaded || vm.allowedRoles.length")
+        .pull-right
+          input.btn.btn-info(
+            type="submit"
+            value="{{ 'pkg.rwhois.client.contact.form.TITLE' | translate }}"
+          )

@@ -1,5 +1,6 @@
 <?php
 
+use App\Database\Models\Model;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use App\Support\Database\Migration;
@@ -15,6 +16,7 @@ class CreateSettings extends Migration
      */
     public function up()
     {
+        Model::unguard();
         $group = $this->addSettingGroup('RWhois');
 
         $this->addSetting($group, Setting::TYPE_TEXT, 'pkg.rwhois.contact.poc.email');
@@ -29,9 +31,15 @@ class CreateSettings extends Migration
         $this->addSetting($group, Setting::TYPE_TEXT, 'pkg.rwhois.contact.abuse.name');
         $this->addSetting($group, Setting::TYPE_TEXT, 'pkg.rwhois.contact.abuse.phone');
 
-        $this->addSetting($group, Setting::TYPE_CHECKBOX, 'pkg.rwhois.allow_role.poc');
-        $this->addSetting($group, Setting::TYPE_CHECKBOX, 'pkg.rwhois.allow_role.tech');
-        $this->addSetting($group, Setting::TYPE_CHECKBOX, 'pkg.rwhois.allow_role.abuse');
+        $this->addSetting($group, Setting::TYPE_CHECKBOX, 'pkg.rwhois.allow_role.poc', [
+            'is_public' => true,
+        ]);
+        $this->addSetting($group, Setting::TYPE_CHECKBOX, 'pkg.rwhois.allow_role.tech', [
+            'is_public' => true,
+        ]);
+        $this->addSetting($group, Setting::TYPE_CHECKBOX, 'pkg.rwhois.allow_role.abuse', [
+            'is_public' => true,
+        ]);
     }
 
     /**
