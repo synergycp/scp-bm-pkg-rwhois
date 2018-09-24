@@ -9,7 +9,7 @@ The RWhois package requires installation of the RWhois server. This can be done 
 As root user (or add "sudo" before "bash" if running as a sudo user):
 
 ```bash
-curl -sS https://install.synergycp.com/bm/pkg/rwhois-installer.sh | bash
+curl -sS https://install.synergycp.com/bm/packages/rwhois-installer.sh | bash
 ```
 
 ## Setting up the Package on SynergyCP
