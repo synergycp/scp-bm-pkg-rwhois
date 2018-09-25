@@ -1,0 +1,48 @@
+{
+  "contact": {
+    "abuse": {
+      "email": {
+        "LABEL": "Global Abuse Email"
+      },
+      "name": {
+        "LABEL": "Global Abuse Name"
+      },
+      "phone": {
+        "LABEL": "Global Abuse Phone"
+      }
+    },
+    "poc": {
+      "email": {
+        "LABEL": "Global POC Email"
+      },
+      "name": {
+        "LABEL": "Global POC Name"
+      },
+      "phone": {
+        "LABEL": "Global POC Phone"
+      }
+    },
+    "tech": {
+      "email": {
+        "LABEL": "Global Tech Email"
+      },
+      "name": {
+        "LABEL": "Global Tech Name"
+      },
+      "phone": {
+        "LABEL": "Global Tech Phone"
+      }
+    }
+  },
+  "allow_role": {
+    "abuse": {
+      "LABEL": "Clients can set Abuse"
+    },
+    "poc": {
+      "LABEL": "Clients can set POC"
+    },
+    "tech": {
+      "LABEL": "Clients can set Tech"
+    }
+  }
+}
