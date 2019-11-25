@@ -1,0 +1,14 @@
+{
+  "data": {
+    "slug": "rwhois",
+    "name": "RWhois",
+    "semver": "1.0.0",
+    "description": "The RWhois package adds functionality to SynergyCP that allows Administrators and Clients to publish RWhois data about their IPs.",
+    "download_url": "https://api.packages.synergycp.com/package/synergycp/rwhois/download.tar.gz",
+    "release_date_unix": 1574636981,
+    "changelog": [
+      "Initial versioned release"
+    ]
+  }
+}
+
