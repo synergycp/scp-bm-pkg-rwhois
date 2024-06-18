@@ -66,7 +66,7 @@ extends Api\Controller
      *
      * @return Response
      */
-    protected function error($code, $message)
+    public function error($code, $message)
     {
         return response(implode(' ', ['error', $code, $message]));
     }
