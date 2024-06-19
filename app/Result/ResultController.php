@@ -54,7 +54,7 @@ extends Api\Controller
         );
 
         if (!$entity) {
-            return $this->error(1, 'IP ' . $ip . ' not found');
+            return $this->handlerError(1, 'IP ' . $ip . ' not found');
         }
 
         return response($this->transform->item($entity, $ip));
@@ -66,7 +66,7 @@ extends Api\Controller
      *
      * @return Response
      */
-    public function error($code, $message)
+    public function handlerError($code, $message)
     {
         return response(implode(' ', ['error', $code, $message]));
     }
